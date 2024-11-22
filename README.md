@@ -1,5 +1,7 @@
 Violet: Empowering Every Shade of You
+
 Overview:
+
 Violet is a platform committed to empowering women through education, awareness, and community support. Our mission is to bridge the significant knowledge gaps in women's health by providing reliable, accessible, and engaging resources. Violet is designed to nurture health, foster understanding, and celebrate every shade of womanhood.
 Despite advances in medical science, many women lack essential knowledge about their bodies, leading to misunderstandings, delayed diagnoses, and poorer health outcomes. Violet addresses this by offering educational tools, a supportive community, and expert guidance to empower informed decision-making and proactive health management.
 Our platform serves as a trusted companion, providing resources for women at every stage of life—from puberty to menopause and beyond. We believe that knowledge is the foundation of empowerment, and we are here to ensure that every woman has access to it.
