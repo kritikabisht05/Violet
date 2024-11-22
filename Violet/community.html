@@ -4,6 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+
+section {
+  background-color: #f4d9f7;
+  opacity: 0.7;
+  padding: 40px;
+  margin: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Form styling */
+.volunteer-form, .form-sharing {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.volunteer-form h2, .form-sharing h2 {
+  font-family: face, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: #936fc1;
+  text-align: center;
+}
+
+.volunteerform, .sharingform {
+  margin-bottom: 15px;
+}
+
+.volunteerform label, .sharingform label {
+  font-family: no2;
+  color: #936fc1;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.volunteerform input, 
+.volunteerform select, 
+.sharingform input, 
+.sharingform select, 
+.sharingform textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-family: no2;
+  background-color: whitesmoke;
+  border: 2px solid #936fc1;
+  color: #936fc1;
+  box-sizing: border-box;
+}
+
+.volunteerform input[type="submit"], 
+.sharingform input[type="submit"] {
+  font-family: no2;
+  background-color: whitesmoke;
+  border: 2px solid #936fc1;
+  color: #936fc1;
+  padding: 8px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  align-self: center;
+}
+
+.volunteerform input[type="submit"]:hover, 
+.sharingform input[type="submit"]:hover {
+  background-color: #936fc1;
+  color: white;
+}
+
+/* Required field marker */
+.Required {
+  color: red;
+  margin-left: 5px;
+}
+
+/* Chat icon styling */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #936fc1;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-icon img {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+    </style>
 
     <title>Violet | Community</title>
   </head>
@@ -15,16 +120,16 @@
         >
         <a href="anatomy.html" class="nav-link">KNOW YOUR ANATOMY</a>
         <a href="community.html" class="nav-link">COMMUNITY</a>
-        <a href="workshops.html" class="nav-link">WORKSHOPS</a>
-        <a href="blog.html" class="nav-link">BLOG</a>
+        <!-- <a href="workshops.html" class="nav-link">WORKSHOPS</a>
+        <a href="blog.html" class="nav-link">BLOG</a> -->
         <button>Sign up</button>
       </div>
     </header>
     <main>
-      <section>workshops</section>
-      <section>volunteer
+      <!-- <section>workshops</section> -->
+      <section>
         <div class="volunteer-form">
-          <h2>why to become a volunteer! </h2>
+          <h2>why to become a volunteer </h2>
           <form id="volunteer-form" class="formvolunteer">
             <div class="volunteerform">
               <label>Full Name <span class="Required">*</span></label>
@@ -55,10 +160,67 @@
           </form>
         </div>
       </section>
-      <section>sharing
-
-      </section>
+      <section>
+      <div class="form-sharing">
+        <h2>Share </h2>
+        <form id="sharing-form" class="formsharing"></form>
+        <div class="sharingform">      
+          <label>Full Name <span class="Required">*</span></label>
+          <input type="text" Required>
+        </div>
+        <div class="sharingform">
+          <label>Email<span class="Required">*</span></label>
+          <input type="email" Required>
+        </div>
+        <div class="sharingform">
+          <label for="title">Title of the Article <span class="Required">*</span></label>
+    <input type="text" id="title" name="title" Required>
+        </div>
+        <div class="sharingform">
+          <label for="category">Category <span class="Required">*</span></label>
+          <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="health">Health</option>
+                <option value="personal">Personal Experiences</option>
+                <option value="science">Science and Research</option>
+                <option value="diet">Diet and Wellness</option>
+                <option value="hygiene">Hygiene</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="sharingform">
+          <label for="content">Content <span class="Required">*</span></label>
+          <textarea id="content" name="content" placeholder="Write your article here..." rows="10" required></textarea>
+        </div>
+        <div class="sharingform">
+          <label for="attachments">Upload Images/Documents</label>
+    <input type="file" id="attachments" name="attachments" accept="image/*,.pdf,.doc,.docx">
+        </div>
+        <div class="sharingform">
+          <input type="checkbox" id="agreement" name="agreement" required>
+          <label for="agreement">I confirm this is my original work and agree to the platform's guidelines.</label>
+        </div>
+         <button type="submit" class="submit-btn">Submit Article</button>
+      </div></section>
     </main>
+    <footer><div id="chat-icon" class="chat-icon">
+      <img
+        src="pictures/Sticker___Purple_Aesthetic-removebg-preview.png"
+        alt="amethyst" />
+    </div>
+    <div id="chat-box" class="chat-box hidden">
+      <div class="chat-header">
+        Chat with Amethyst
+        <span id="close-chat">×</span>
+      </div>
+      <div class="chat-messages">
+        <!-- Messages will appear here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chat-message" placeholder="Type a message..." />
+        <button id="send-message">Send</button>
+      </div>
+    </footer>
     </body>
   <script src="app.js"></script>
 </html>
