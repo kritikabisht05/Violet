@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Violet | Know Your Anatomy</title>
+    <style>
+      @font-face {
+        font-family: face;
+        src: url(fonts/Fontspring-DEMO-theseasons-reg.otf);
+      }
+      @font-face {
+        font-family: season;
+        src: url(fonts/Fontspring-DEMO-theseasons-it.otf);
+      }
+      @font-face {
+        font-family: no2;
+        src: url(fonts/NotCourierSans.otf);
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        opacity: 1;
+        position: fixed;
+      }
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: top 0.3s;
+        font-family: no2;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-left: 2rem;
+      }
+
+      .logo {
+        font-family: season;
+        font-size: 4rem;
+        color: #ffffff;
+        margin-left: 0;
+      }
+
+      .hero {
+        background-image: url(pictures/pexels-codioful-7130564.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        box-sizing: border-box;
+        font-family: face;
+      }
+      .hero-content {
+        text-align: center;
+        color: white;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: normal;
+      }
+      .intro {
+        display: flex;
+        flex-direction: column;
+        padding: 70px 0;
+        text-align: left;
+        justify-content: center;
+        height: 500px;
+        max-width: 600px;
+        margin-left: 30px;
+      }
+      .intro h1 {
+        color: #936fc1;
+        font-family: face, sans-serif;
+        font-size: 60px;
+        line-height: 1.2;
+        font-weight: 300;
+      }
+      .info-cards {
+        font-family: no2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .card {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+      .card h3 {
+        margin: -3px;
+        font-size: 3rem;
+      }
+      .card p {
+        margin: 0.5rem;
+        font-size: 1.25rem;
+      }
+      button {
+        font-family: no2;
+        background-color: transparent;
+        border: 2px solid white;
+        color: #ffffff;
+        padding: 8px 10px;
+        font-size: 20px;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        margin-top: 20px;
+      }
+      .button:hover {
+        background-color: #ffffff;
+        color: black;
+      }
+      .chat-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #936fc1;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      .chat-icon img {
+        margin-top: 5px;
+        width: 50px; /* or any custom size */
+        height: 50px;
+        object-fit: contain;
+      }
+
+      .chat-box {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+      }
+
+      .chat-header {
+        background-color: #936fc1;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .chat-messages {
+        flex-grow: 1;
+        padding: 10px;
+        overflow-y: auto;
+      }
+
+      .chat-input {
+        display: flex;
+        padding: 10px;
+      }
+
+      .chat-input input {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 5px;
+      }
+
+      .chat-input button {
+        background-color: #936fc1;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #close-chat {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <a href="index.html" class="nav-link logo" style="font-size: 4rem"
+          >Violet</a
+        >
+        <a href="anatomy.html" class="nav-link">KNOW YOUR ANATOMY</a>
+        <a href="community.html" class="nav-link">COMMUNITY</a>
+        <a href="workshops.html" class="nav-link">WORKSHOPS</a>
+        <a href="blog.html" class="nav-link">BLOG</a>
+        <button class="button sign-up">Sign up</button>
+      </div>
+    </header>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>
+          Empowering You from the Inside Out: <br />Navigate Your Body, Nurture
+          Your Health
+        </h1>
+      </div>
+    </div>
+    <div class="intro">
+      <h1>Embracing the full definition of women’s health</h1>
+    </div>
+    <div class="info-cards">
+      <div class="card" style="background-image: url(pictures/card\ 1.jpg)">
+        <h3>Hormones</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+      <div class="card" style="background-image: url(pictures/card\ 2.jpg)">
+        <h3>Hair</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+      <div class="card" style="background-image: url(pictures/card\ 3.jpg)">
+        <h3>Skin</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+      <div class="card" style="background-image: url(pictures/card\ 4.jpg)">
+        <h3>Menstrual Cycle</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+      <div class="card" style="background-image: url(pictures/card\ 5.jpg)">
+        <h3>Diet</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+      <div class="card" style="background-image: url(pictures/card\ 6.jpg)">
+        <h3>Hygiene</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="learn-more">
+          <button class="button">Learn More</button>
+        </a>
+      </div>
+    </div>
+    <div id="chat-icon" class="chat-icon">
+      <img
+        src="pictures/Sticker___Purple_Aesthetic-removebg-preview.png"
+        alt="amethyst" />
+    </div>
+    <div id="chat-box" class="chat-box hidden">
+      <div class="chat-header">
+        Chat with Amethyst
+        <span id="close-chat">×</span>
+      </div>
+      <div class="chat-messages">
+        <!-- Messages will appear here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chat-message" placeholder="Type a message..." />
+        <button id="send-message">Send</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

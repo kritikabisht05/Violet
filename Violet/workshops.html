@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshops - Feminine Hygiene</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      .left {
+        background-color: #f5f5f5;
+      }
+
+      .left img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .right {
+        background-color: #657d4a;
+        color: white;
+      }
+
+      .right h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .right p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .partition {
+        height: 5px;
+        margin: 0px;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .introd,
+      .main {
+        display: flex;
+      }
+
+      .organize {
+        outline: visible;
+        outline-width: 15px;
+        outline-color: #e83abf;
+      }
+      .contents {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="navbar">
+        <a href="index.html" class="nav-link logo" style="font-size: 4rem"
+          >Violet</a
+        >
+        <a href="anatomy.html" class="nav-link">KNOW YOUR ANATOMY</a>
+        <a href="community.html" class="nav-link">COMMUNITY</a>
+        <a href="workshops.html" class="nav-link">WORKSHOPS</a>
+        <a href="blog.html" class="nav-link">BLOG</a>
+        <button>Sign up</button>
+      </div>
+    </header>
+    <div class="container">
+      <div class="left">
+        <img src="download.jpeg" alt="Workshop Image" />
+      </div>
+      <div class="right">
+        <h2>Workshops</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem
+          odit sit dolorum ipsa laboriosam? Porro necessitatibus quis
+          perferendis non beatae nulla minus commodi aperiam officiis, ipsum
+          animi. Nemo libero quasi vitae eos quaerat cum aperiam voluptas,
+          laborum dolor rem alias, pariatur dolorem corrupti consequatur. Quidem
+          perferendis culpa quis saepe!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          obcaecati, minus molestias laboriosam a veritatis sed doloremque totam
+          velit voluptas placeat quia, accusantium, fugiat eveniet aliquam
+          voluptatem accusamus provident? Sequi iusto minus mollitia sunt aut
+          dolorum molestias. Accusantium eius possimus voluptatem odit,
+          molestias cum sunt reiciendis in dolores. Tempora, unde.
+        </p>
+      </div>
+    </div>
+    <div class="contents">
+      <div class="volunteers">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          obcaecati, minus molestias laboriosam a veritatis sed doloremque totam
+          velit voluptas placeat quia, accusantium, fugiat eveniet aliquam
+          voluptatem accusamus provident? Sequi iusto minus mollitia sunt aut
+          dolorum molestias. Accusantium eius possimus voluptatem odit,
+          molestias cum sunt reiciendis in dolores. Tempora, unde.
+        </p>
+      </div>
+      <div class="organize">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          obcaecati, minus molestias laboriosam a veritatis sed doloremque totam
+          velit voluptas placeat quia, accusantium, fugiat eveniet aliquam
+          voluptatem accusamus provident? Sequi iusto minus mollitia sunt aut
+          dolorum molestias. Accusantium eius possimus voluptatem odit,
+          molestias cum sunt reiciendis in dolores. Tempora, unde.
+        </p>
+      </div>
+    </div>
+    <div id="chat-icon" class="chat-icon">
+      <img
+        src="pictures/Sticker___Purple_Aesthetic-removebg-preview.png"
+        alt="amethyst" />
+    </div>
+    <div id="chat-box" class="chat-box hidden">
+      <div class="chat-header">
+        Chat with Amethyst
+        <span id="close-chat">×</span>
+      </div>
+      <div class="chat-messages">
+        <!-- Messages will appear here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chat-message" placeholder="Type a message..." />
+        <button id="send-message">Send</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

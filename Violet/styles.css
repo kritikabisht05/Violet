@@ -1,0 +1,451 @@
+@font-face {
+  font-family: face;
+  src: url(fonts/Fontspring-DEMO-theseasons-reg.otf);
+}
+
+@font-face {
+  font-family: no2;
+  src: url(fonts/NotCourierSans.otf);
+}
+
+@font-face {
+  font-family: season;
+  src: url(fonts/Fontspring-DEMO-theseasons-it.otf);
+}
+
+body {
+  background-image: url(pictures/download.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: no2;
+  background-color: whitesmoke;
+  border: 2px solid #936fc1;
+  color: #936fc1;
+  padding: 8px 10px;
+  font-size: 20px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #936fc1;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+}
+.navbar {
+  font-family: no2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 2rem; /* Add some space between links */
+}
+
+.logo {
+  font-family: season;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+/* Adjust the button styling if needed */
+.navbar button {
+  font-family: no2;
+  background-color: whitesmoke;
+  border: 2px solid #936fc1;
+  color: #936fc1;
+  padding: 8px 10px;
+  font-size: 20px;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #936fc1;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+  text-align: left;
+  justify-content: center;
+  color: #ffffff;
+  height: 500px;
+  max-width: 600px;
+  margin-left: 30px;
+}
+
+.hero h1 {
+  font-family: face, sans-serif;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: -16px;
+}
+
+.hero p {
+  font-family: no2;
+  font-size: 25px;
+  margin-bottom: -15px;
+  font-weight: 100;
+}
+.hero h4 {
+  font-family: no2;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 100;
+}
+
+.volunteer {
+  background-color: #f4d9f7;
+  opacity: 0.7;
+  padding: 15px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.volunteer h2 {
+  font-family: face, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: -55px;
+  color: #936fc1;
+  margin-top: -1px;
+}
+
+.volunteer h6 {
+  font-family: face, sans-serif;
+  color: #543f70;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: -10px;
+}
+
+.volunteer p {
+  font-family: no2;
+  font-size: 20px;
+  margin-bottom: -15px;
+  color: #936fc1;
+  word-spacing: -40%;
+}
+
+.intro {
+  background-image: url(pictures/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 20px;
+  text-align: center;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.intro h2 {
+  font-family: face, sans-serif;
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+.intro p {
+  font-family: no2;
+  font-size: 20px;
+  margin-bottom: -15px;
+  font-weight: 100;
+}
+
+.know-more {
+  margin-top: 30px;
+  width: 150px;
+  opacity: 0.7;
+}
+
+.journey {
+  background-color: #f4d9f7;
+  opacity: 0.7;
+  padding: 15px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.journey h2 {
+  font-family: face, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: -25px;
+  color: #936fc1;
+  margin-top: -1px;
+}
+
+.journey h5 {
+font-family: face, sans-serif;
+  color: #543f70;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: -10px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+  text-align: justify;
+  text-align-last: right;
+  color: #ffffff;
+  height: 600px;
+  max-width: 600px;
+  margin-left: 650px;
+}
+
+.about h2 {
+  font-family: face, sans-serif;
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.about p {
+  font-family: no2;
+  font-size: 20px;
+  margin-top: -15px;
+  font-weight: 100;
+}
+
+footer {
+  background-color: #f4d9f7;
+  opacity: 0.7;
+}
+
+.newsletter {
+  padding: 20px 20px;
+  text-align: left;
+  color: #936fc1;
+  font-family: no2;
+}
+
+.newsletter h2 {
+  font-family: face, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.newsletter p {
+  font-size: 27 px;
+  margin-bottom: -5px;
+}
+
+.newsletter input {
+  font-family: no2;
+  background-color: whitesmoke;
+  border: 2px solid #936fc1;
+  color: #936fc1;
+  padding: 6px 10px;
+  font-size: 25px;
+  border-radius: 0;
+}
+
+.card {
+  display: flex;
+  height: 70px;
+  width: 270px;
+}
+
+.card svg {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card .social-link1,
+.card .social-link2,
+.card .social-link3,
+.card .social-link4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card svg {
+  transform: scale(1);
+}
+
+.card .social-link1:hover {
+  background: #936fc1;
+  animation: ease 0.4s linear;
+}
+
+.card .social-link2:hover {
+  background-color: #936fc1;
+  animation: ease 0.4s linear;
+}
+
+.card .social-link3:hover {
+  background-color: #936fc1;
+  animation: ease 0.4s linear;
+}
+
+.card .social-link4:hover {
+  background-color: #936fc1;
+  animation: ease 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #936fc1;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.chat-icon img {
+  margin-top: 5px;
+  width: 50px; /* or any custom size */
+  height: 50px;
+  object-fit: contain;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: #936fc1;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.chat-input button {
+  background-color: #936fc1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#close-chat {
+  cursor: pointer;
+}

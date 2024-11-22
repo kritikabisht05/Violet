@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Violet | Community</title>
+  </head>
+  <body id="homebody">
+    <header>
+      <div id="navbar" class="navbar">
+        <a href="index.html" class="nav-link logo" style="font-size: 4rem"
+          >Violet</a
+        >
+        <a href="anatomy.html" class="nav-link">KNOW YOUR ANATOMY</a>
+        <a href="community.html" class="nav-link">COMMUNITY</a>
+        <a href="workshops.html" class="nav-link">WORKSHOPS</a>
+        <a href="blog.html" class="nav-link">BLOG</a>
+        <button>Sign up</button>
+      </div>
+    </header>
+    <main>
+      <section>workshops</section>
+      <section>volunteer
+        <div class="volunteer-form">
+          <h2>why to become a volunteer! </h2>
+          <form id="volunteer-form" class="formvolunteer">
+            <div class="volunteerform">
+              <label>Full Name <span class="Required">*</span></label>
+              <input type="text" Required>
+              </div>
+              <div class="volunteerform">
+              <label>Email<span class="Required">*</span></label>
+              <input type="email" Required>
+            </div>
+            <div class="volunteerform">
+              <label>contact No<span class="Required">*</span>
+              </label>
+              <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  Required >
+            </div>
+              <div class="volunteerform">
+                <label>Hours You Can Contribute(Weekly)<span class="Required">*</span></label>
+                 <select required>
+                  <option value="2-5">Flexible(2–4 hours)</option>
+                  <option value="5-10">Moderate(5–10 hours)</option>
+                  <option value="10-15">High(10–15 hours)</option>
+                 </select>
+              </div>
+              <div class="volunteerform">
+                <label>Why do you want to volunteer? <span class="Required">*</span></label>
+                <textarea Required>(50-60 words)</textarea>
+              </div>
+              <button type="submit" class="submitbtn">submit</button>
+          </form>
+        </div>
+      </section>
+      <section>sharing
+
+      </section>
+    </main>
+    </body>
+  <script src="app.js"></script>
+</html>
